@@ -5,10 +5,8 @@ class Countdown {
     double r = 6.0;
  //   countdown(99);
     double a = area(r);
-    double dist = distance(1.0, 2.0, 4.0, 6.0);
-    System.out.println("Distance equals " + dist);
-     System.out.println("The area of the circle is: " + a);
-     System.out.println("The absolute value of -6.0 is " + absoluteValue(-6.0));
+    double x = area(1.0, 2.0, 4.0, 6.0);
+     System.out.println("The area of the circle is: " + x);
   }
 
   public static void countdown(int x)
@@ -26,8 +24,9 @@ class Countdown {
      return Math.PI * radius * radius;
   }
 
-  public static double distance(double x1, double y1, double x2, double y2) {
+  public static double area(double x1, double y1, double x2, double y2) {
 
+      return area(distance(x1, y1, x2, y2));
      double dx = x2 - x1;
      double dy = y2 - y1;
      double dsquared = dx*dx + dy*dy;
